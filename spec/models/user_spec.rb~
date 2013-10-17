@@ -63,7 +63,7 @@ describe User do
 			it { should_not be_valid }
 		end
 
-		describe "email address with mixed cases" do
+		describe "email address with mixed cases"
 			let(:mixed_case_email) { "Foo@ExAmPlE.CoM" }
 
 			it "should be saved as all lower-case" do
@@ -107,4 +107,4 @@ describe User do
 		      specify { expect(user_for_invalid_password).to be_false }
 		    end
 		  end
-end
+		end
