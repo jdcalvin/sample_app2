@@ -31,8 +31,17 @@ describe "Static pages" do
 					page.should have_selector("li##{item.id}", text: item.content)
 				end
 			end
-			#	Spec is failing for some reason, cannot figure out why
-			#	appears to be working on site
+
+			describe "follower/following counts" do
+				let(:other_user){ FactoryGirl.create(:user) }
+				before do
+					other_user.follow!(user)
+					visit root_path
+				end
+
+				it { should have_link("0 following", href: following_user_path(user)) }
+				it { should have_link("1 followers", href: followers_user_path(user)) }
+			end
 		end
   end
 
