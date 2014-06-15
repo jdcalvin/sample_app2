@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.1'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.0'
@@ -8,6 +8,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
+gem 'rails_exception_handler', :path => "lib/rails_exception_handler"
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
